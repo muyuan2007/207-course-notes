@@ -6,6 +6,7 @@
  *
  * Relevant reading: 1.4. Strings and 1.4.4. StringBuilder.
  */
+
 public class FirstLetters {
 
     public static void main(String[] args) {
@@ -25,7 +26,11 @@ public class FirstLetters {
      * @return the first character of each word, concatenated
      */
     public static String firstLetters(String words) {
-        // TODO: complete
-        return "";
+        StringBuilder sb = new StringBuilder();
+        String[] splitWords = words.split(" ");
+        for (String word: splitWords) {
+            sb.append(word.charAt(0));
+        }
+        return sb.toString();
     }
 }
